@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:authcodeview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/et_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edittext"
+        android:layout_marginTop="8dp"
+        android:ems="16"
+        android:hint="请输入用户名"
+        android:inputType="text"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="#AAAAAA"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edittext"
+         android:layout_marginTop="8dp"
+        android:ems="16"
+        android:hint="6-16位字符"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="#AAAAAA"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_again_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edittext"
+        android:ems="16"
+        android:hint="请再次输入密码"
+        android:inputType="textPassword"
+         android:layout_marginTop="8dp"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="#AAAAAA"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edittext"
+        android:hint="请输入下放验证码"
+        android:inputType="text"
+         android:layout_marginTop="8dp"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="#AAAAAA"
+        android:textSize="16sp" />
+
+    <view.AuthCodeView
+        android:id="@+id/bt_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        authcodeview:titleText="3712"
+        authcodeview:titleTextColor="#00ffff"
+        authcodeview:titleTextSize="40sp" />
+
+    <Button
+        android:id="@+id/bt_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_form"
+        android:text="完	      成"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
