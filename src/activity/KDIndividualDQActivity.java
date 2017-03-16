@@ -51,12 +51,10 @@ public class KDIndividualDQActivity extends BaseActivity implements OnClickListe
 
 		public void handleMessage(Message msg) {
 			switch (msg.what) {
-			case StaticClass.INIT_DATA_OK:
-				L.i("flagIsOnedata----" + data.size());
+			case StaticClass.LOAD_DATA_OK:
 				KDTeamAdapter adapter = new KDTeamAdapter(KDIndividualDQActivity.this, data);
 				adapter.notifyDataSetChanged();
 				iv_individula.setAdapter(adapter);
-				UtilTools.setListViewHeightBasedOnChildren(iv_individula);
 				break;
 
 			default:
@@ -82,8 +80,6 @@ public class KDIndividualDQActivity extends BaseActivity implements OnClickListe
 		dialog = new CustomDialog(this, width, height, R.layout.dialog_team_dq, R.style.Theme_dialog,
 				Gravity.CENTER, R.style.pop_anim_style);
 
-		dialog.setCancelable(true);
-		
 		
 		et_nichen = (EditText) dialog.findViewById(R.id.et_nichen);
 		et_mail = (EditText) dialog.findViewById(R.id.et_mail);
@@ -127,15 +123,11 @@ public class KDIndividualDQActivity extends BaseActivity implements OnClickListe
 						bufferData = new KDTeamData();
 						user = object.get(i);
 						bufferData.setTeam_name(user.getUsername().toString());
-						if (user.getTeamFlag().equals("1")){
-							bufferData.setTeam_property("个人代取");
-						} else{
-							bufferData.setTeam_property(user.getTeamFlag() + "团队");
-						}
+						bufferData.setTeam_property("个人代取");
 						bufferData.setTeam_head(user.getImgHead().toString());
 						data.add(bufferData);
 					}
-					handler.sendEmptyMessage(StaticClass.INIT_DATA_OK);
+					handler.sendEmptyMessage(StaticClass.LOAD_DATA_OK);
 				} else {
 					L.i("getData 失败");
 				}

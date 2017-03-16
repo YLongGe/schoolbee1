@@ -9,6 +9,7 @@ import com.tjnu.schoolbee.R;
 import activity.UAboutWeActivity;
 import activity.UMyInfomationActivity;
 import activity.UMyOrdersActivity;
+import activity.UMyPaiJianActivity;
 import activity.USetingActivity;
 import adapter.MyInfoAdapter;
 import android.app.Activity;
@@ -121,8 +122,9 @@ public class MyInfoFragment extends Fragment implements View.OnClickListener {
 				case 1:
 					startActivity(new Intent(getActivity(), UMyInfomationActivity.class));
 					break;
-				// 我的收益
+				// 我的派件
 				case 2:
+					startActivity(new Intent(getActivity(), UMyPaiJianActivity.class));
 					break;
 				// 带点评
 				case 3:

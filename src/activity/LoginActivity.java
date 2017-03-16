@@ -10,7 +10,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -21,7 +20,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import cn.bmob.v3.BmobUser;
@@ -80,7 +78,6 @@ public class LoginActivity extends Activity implements OnClickListener {
 		et_userpassword = (EditText) findViewById(R.id.et_userpassword);
 
 		cb_remberPWD = (CheckBox) findViewById(R.id.cb_remberPWD);
-		// cb_autoLogin = (CheckBox) findViewById(R.id.cb_autoLogin);
 
 		iv_head = (CircleImageView) findViewById(R.id.iv_head);
 		iv_head.setBorderWidth(2);
@@ -176,7 +173,8 @@ public class LoginActivity extends Activity implements OnClickListener {
 		}
 
 	}
-
+	
+	
 	/**
 	 * 登录远程服务器
 	 * 

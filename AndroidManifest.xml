@@ -215,6 +215,11 @@
         <activity
             android:name="activity.KDTeamDQActivity"
             android:label="团队代取" />
+        
+         <!-- 我去派件 -->
+        <activity
+            android:name="activity.UMyPaiJianActivity"
+            android:label="我去派件" />
     </application>
 
 </manifest>

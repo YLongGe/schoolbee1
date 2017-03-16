@@ -35,6 +35,7 @@ import entity.MyOrdersData;
 import entity.MyUser;
 import entity.UserDqInfomation;
 import utils.L;
+import utils.UtilTools;
 import view.CustomDialog;
 
 public class UMyOrdersActivity extends BaseActivity implements View.OnClickListener{
@@ -47,12 +48,7 @@ public class UMyOrdersActivity extends BaseActivity implements View.OnClickListe
 	//数据加载失败
 	private static final int CACHE_DATA_FAIL = 201;
 	
-	private static  String PHONE;
-	
 	private TextView tv_sum;
-	
-	//记录快件个数
-	private int sum = 0;
 	
 	private CustomDialog dialog;
 	
@@ -100,11 +96,8 @@ public class UMyOrdersActivity extends BaseActivity implements View.OnClickListe
 
 		dialog.setCancelable(false);
 		
-		WindowManager manager = this.getWindowManager();
-		DisplayMetrics outMetrics = new DisplayMetrics();
-		manager.getDefaultDisplay().getMetrics(outMetrics);
-		int width = (int) (outMetrics.widthPixels * 0.7);
-		int height = (int) (outMetrics.heightPixels * 0.5);
+		int width = (int) (UtilTools.getWindowWidth(this) * 0.7);
+		int height = (int)(UtilTools.getWindowHeigth(this) * 0.5);
 		//显示详细信息的dialog
 		displayList = new CustomDialog(this, width,
 				height, R.layout.dialog_display_list, R.style.Theme_dialog, Gravity.CENTER,

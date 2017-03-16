@@ -186,15 +186,9 @@ public class KDFragment extends Fragment implements OnClickListener {
 	private void getData() {
 
 		List<BmobQuery<MyUser>> queries = new ArrayList<BmobQuery<MyUser>>();
-	//	BmobQuery<MyUser> q1 = new BmobQuery<MyUser>();
-		//q1.addWhereEqualTo("teamFlag", "1");
 		BmobQuery<MyUser> q2 = new BmobQuery<MyUser>();
-		//q2.addWhereEqualTo("teamFlag", "2");
 		q2.addQueryKeys("teamFlag");
-		//queries.add(q1);
 		queries.add(q2);
-		
-		
 		
 		BmobQuery<MyUser> query = new BmobQuery<MyUser>();
 		query.or(queries).order("-createdAt").findObjects(new FindListener<MyUser>() {

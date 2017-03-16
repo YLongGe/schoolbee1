@@ -15,5 +15,8 @@ public class StaticClass {
 	public static final String BAIDU_MAP_KEY = "7u3VRIK0FhqG8oYhUlHs91yAvlmfxdip";
 	
 	//加载数据完成
-	public static final int INIT_DATA_OK = 0;
+	public static final int LOAD_DATA_OK = 0;
+	
+	//加载数据失败
+	public static final int LOAD_DATA_FAIL = 1;
 }

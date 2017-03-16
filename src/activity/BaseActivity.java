@@ -4,17 +4,18 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class BaseActivity extends Activity{
+public class BaseActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-		
+		getActionBar().setDisplayShowHomeEnabled(false);
+
 	}
-	
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		switch(item.getItemId()){
+		switch (item.getItemId()) {
 		case android.R.id.home:
 			finish();
 			break;

@@ -22,7 +22,7 @@
     <string-array name="info">
         <item name="1">我的订单</item>
         <item>我的信息</item>
-        <item>我的收益</item>
+        <item>我去派件</item>
         <item>待点评</item>
         <item>关于我们</item>
         <item>设置</item>
